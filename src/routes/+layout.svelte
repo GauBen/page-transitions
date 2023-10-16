@@ -7,12 +7,17 @@
 
 	let showSpinner = false;
 
-	$: if (browser && $navigating && document.startViewTransition) {
-		document.startViewTransition(async () => {
+	$: if ($navigating) {
+		if (document.startViewTransition) {
+			document.startViewTransition(async () => {
+				showSpinner = true;
+				await tick();
+				if (!$navigating) showSpinner = false;
+			});
+		} else {
+			// For browsers that don't support view transitions
 			showSpinner = true;
-			await tick();
-			if (!$navigating) showSpinner = false;
-		});
+		}
 	} else {
 		showSpinner = false;
 	}
