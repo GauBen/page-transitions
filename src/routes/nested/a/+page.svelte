@@ -1,8 +1,5 @@
-<p>A</p>
+<script>
+	import EmptyPage from '$lib/EmptyPage.svelte';
+</script>
 
-<style>
-	p {
-		border: 1px solid #000;
-		padding: 1rem;
-	}
-</style>
+<EmptyPage />

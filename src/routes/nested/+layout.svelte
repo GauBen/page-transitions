@@ -4,11 +4,11 @@
 
 <div class="grid">
 	<ul>
-		<li><a href="a">Aaaaaaa</a></li>
-		<li><a href="b">Bbbbbbb</a></li>
+		<li><a href="/nested/a">Aaaaaaa</a></li>
+		<li><a href="/nested/b">Bbbbbbb</a></li>
 	</ul>
 	<div>
-		<Suspense layout="/nested"><slot /></Suspense>
+		<Suspense><slot /></Suspense>
 	</div>
 </div>
 

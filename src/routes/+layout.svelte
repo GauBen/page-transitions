@@ -1,10 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Suspense from '$lib/Suspense.svelte';
-	import { setContext } from 'svelte';
 	import '../app.css';
-
-	setContext('suspense', []);
 </script>
 
 <nav>
@@ -16,7 +13,7 @@
 </nav>
 
 <main>
-	<Suspense layout=""><slot /></Suspense>
+	<Suspense><slot /></Suspense>
 </main>
 
 <style>
