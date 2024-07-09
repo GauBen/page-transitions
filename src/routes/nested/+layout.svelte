@@ -8,7 +8,7 @@
 		<li><a href="/nested/b">Bbbbbbb</a></li>
 	</ul>
 	<div>
-		<Suspense><slot /></Suspense>
+		<Suspense layout="/nested"><slot /></Suspense>
 	</div>
 </div>
 

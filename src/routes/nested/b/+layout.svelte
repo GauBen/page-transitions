@@ -5,7 +5,7 @@
 <h1>B</h1>
 
 <table>
-	{#each ['first', 'second', 'third'] as el}
+	{#each ['fourth', 'fifth', 'sixth'] as el}
 		<tr>
 			<td><a href="/nested/b/{el}">{el}</a></td>
 			<td>{el.length}</td>
@@ -14,7 +14,7 @@
 	{/each}
 </table>
 
-<SuspensePanel>
+<SuspensePanel layout="/nested/b">
 	<slot />
 </SuspensePanel>
 

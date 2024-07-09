@@ -14,7 +14,7 @@
 	{/each}
 </table>
 
-<SuspensePanel>
+<SuspensePanel layout="/nested/a">
 	<slot />
 </SuspensePanel>
 

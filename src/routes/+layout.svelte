@@ -13,7 +13,7 @@
 </nav>
 
 <main>
-	<Suspense><slot /></Suspense>
+	<Suspense layout=""><slot /></Suspense>
 </main>
 
 <style>
