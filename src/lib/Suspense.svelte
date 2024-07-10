@@ -1,17 +1,13 @@
 <script lang="ts">
+	import { navigating } from '$app/stores';
 	import { createSuspenseContext } from './suspense.js';
 
 	export let layout: string;
 
 	const showSpinner = createSuspenseContext(layout);
-
-	// $: showSpinner =
-	// 	$navigating &&
-	// 	$navigating.from?.url.pathname.startsWith(layout) &&
-	// 	$navigating.to?.url.pathname.startsWith(layout);
 </script>
 
-{#if $showSpinner}
+{#if $navigating && $showSpinner($navigating)}
 	<div class="spinner-wrapper">
 		<div class="spinner" />
 	</div>
